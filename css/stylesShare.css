@@ -1,10 +1,61 @@
-#filters .button{
-    border-radius: 20px;
-    border: 2px solid #b3b3b3;
-    background-color: #fff;
-    padding: 0 10px;
-    color: #b7b0b0;
+/* ======================================================
+   SEARCH BAR
+   ====================================================== */
+.search-container{
+    display: flex;
+    flex-direction: row;
+}
+.search-container .icon-search{
+    background-color: rgb(235 62 62);
+    border-radius: 0 100px 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+.search-container .icon-search img {
+    width: 25px;
+    padding: 2px;
+    margin: 0;
+}
 
+.search-container .form-control {
+    display: block;
+    width: 90%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 100px 0 0 100px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.search-container .form-control:focus {
+    border-color: #c1c1c1;
+    box-shadow: 0 0 0 .25rem rgb(255, 255, 255);
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+#filters .button {
+    border-radius: 20px;
+    border: 1px solid #f40000;
+    background-color: #eb3e3e;
+    padding: 3px 10px;
+    color: #ffffff;
+    box-shadow: 0px 0px 3px 1px #00000014;
 }
 
 .media-card {
@@ -14,7 +65,6 @@
     overflow: hidden;
     border: 1px solid #dce1e8;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-
     transition: transform 0.2s ease,
         box-shadow 0.2s ease;
 }
@@ -127,26 +177,21 @@
 .media-card .card-footer-custom img{
     width: 18px;
 }
-.media-card .card-footer-custom .download-button {
-    background-color: rgb(235 62 62);
-    border: 0;
+.media-card .card-footer-custom button{
     padding: 8px 5px;
     border-radius: 23px;
-    width: 25%;
+    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    color: #fff;
+    border: 0;
+}
+.media-card .card-footer-custom .download-button {
+    background-color: rgb(235 62 62);
 }
 .media-card .card-footer-custom .share-button {
     background-color: #26b159;
-    border: 0;
-    padding: 5px;
-    border-radius: 25px;
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
 }
 .media-card .card-footer-custom p{
     margin: 0;
@@ -161,19 +206,15 @@
 ========================= */
 
 @media (max-width: 991px) {
-
     .media-image {
         aspect-ratio: 0.72 / 1;
     }
-
     .card-title {
         font-size: 18px;
     }
-
     .share-button {
         font-size: 17px;
     }
-
 }
 
 
@@ -184,7 +225,7 @@
 @media (max-width: 575px) {
 .media-card .card-footer-custom .share-button {
     padding: 0px;
-    width: 45%;
+    width: 50%;
     height: 37px;
     font-size: 20px;
      justify-content: space-evenly;
@@ -193,8 +234,9 @@
     width: 30px;
 }
 .media-card .card-footer-custom .download-button {
-    width: 25%;
+    width: 50%;
     height: 37px;
+    font-size: 20px;
 }
 
     .container-fluid {
@@ -308,15 +350,11 @@
 
 #modalMediaContainer img {
     display: block;
-
     max-width: 100%;
     max-height: 75vh;
-
     width: auto;
     height: auto;
-
     object-fit: contain;
-
     border-radius: 8px;
 }
 
@@ -378,19 +416,15 @@
 /* En celulares */
 
 @media (max-width: 576px) {
-
     .media-modal-content {
         border-radius: 0;
     }
-
     #modalMediaContainer img {
         max-height: 70vh;
     }
-
     #modalMediaContainer video {
-        max-height: 100vh;
+        max-height: 70vh;
     }
-
     .modal-media-title {
         font-size: 20px;
     }
@@ -439,149 +473,96 @@
 /* Fondo */
 
 .custom-share-overlay {
-
     position: absolute;
-
     inset: 0;
-
     background: rgba(0, 0, 0, 0.55);
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 20px;
-
 }
 
 
 /* Caja */
 
 .custom-share-box {
-
     width: 100%;
-
     max-width: 400px;
-
     background: white;
-
     border-radius: 18px;
-
     padding: 20px;
-
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.25);
-
 }
 
 
 /* Header */
 
 .custom-share-header {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     margin-bottom: 10px;
 
 }
 
 
 .custom-share-header h5 {
-
     margin: 0;
-
     font-weight: 700;
 
 }
 
 
 .custom-share-close {
-
     border: none;
-
     background: transparent;
-
     font-size: 30px;
-
     line-height: 1;
-
     cursor: pointer;
 
 }
-
-
 /* Título */
 
 .custom-share-title {
-
     color: #666;
-
     font-size: 14px;
-
     margin-bottom: 15px;
 
 }
 
-
 /* Opciones */
 
 .custom-share-options {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 10px;
 
 }
 
 
 .custom-share-option {
-
     width: 100%;
-
     border: 1px solid #ddd;
-
     background: white;
-
     border-radius: 10px;
-
     padding: 13px;
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
     font-size: 16px;
-
     cursor: pointer;
-
     transition: background 0.2s;
-
 }
 
 
 .custom-share-option:hover {
-
     background: #f5f5f5;
 
 }
 
-
 .share-option-icon {
-
     width: 32px;
-
     text-align: center;
-
     font-weight: 600;
-
 }

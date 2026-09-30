@@ -13,19 +13,26 @@
 
 <body>
 
-<!--     <div class="container-fluid p-0">
-    <picture>
-        <source media="(max-width: 767.98px)" srcset="media/img/Bannermovil.jpg">
-        <img 
-            src="media/img/Bannerweb.jpg" 
-            class="img-fluid w-100 d-block"
-            alt="Banner"
-        >
-    </picture>
-</div> -->
+    <div class="container-fluid p-0">
+        <picture>
+            <source media="(max-width: 767.98px)" srcset="media/img/BANNERMOVIL1.jpg">
+            <img src="media/img/BANNERWEB1.jpg" class="img-fluid w-100 d-block" alt="Banner">
+        </picture>
+    </div> 
+
 
 
     <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 mb-3">
+                <div class="search-container">
+                    <input type="search" class="form-control search-input" id="buscador" placeholder="Buscar...">
+                    <div class="icon-search">
+                        <img src="media/img/icons/magnifying-glass-solid-full.svg" alt="">  
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div id="filters" class="button-group">
@@ -72,11 +79,14 @@
 
                     <!-- Footer -->
                     <div class="card-footer-custom">
-                        <button class="share-button">
-                            <p>Compartir</p><img src="media/img/icons/share-nodes-solid-full.svg" alt="">
+                          <button class="share-button">
+                            <p>Compartir</p>
+                            <img src="media/img/icons/share-nodes-solid-full.svg">
                         </button>
-                        <button class="download-button"><img src="media/img/icons/download-solid-full.svg"
-                                alt=""></button>
+                        <button class="download-button">
+                            <p>Descargar</p>
+                            <img src="media/img/icons/download-solid-full.svg">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -117,10 +127,13 @@
                     <!-- Footer -->
                     <div class="card-footer-custom">
                         <button class="share-button">
-                            <p>Compartir</p><img src="media/img/icons/share-nodes-solid-full.svg" alt="">
+                            <p>Compartir</p>
+                            <img src="media/img/icons/share-nodes-solid-full.svg">
                         </button>
-                        <button class="download-button"><img src="media/img/icons/download-solid-full.svg"
-                                alt=""></button>
+                        <button class="download-button">
+                            <p>Descargar</p>
+                            <img src="media/img/icons/download-solid-full.svg">
+                        </button>
                     </div>
                 </div>
 
@@ -155,11 +168,14 @@
 
                     <!-- Footer -->
                     <div class="card-footer-custom">
-                        <button class="share-button">
-                            <p>Compartir</p><img src="media/img/icons/share-nodes-solid-full.svg" alt="">
+                         <button class="share-button">
+                            <p>Compartir</p>
+                            <img src="media/img/icons/share-nodes-solid-full.svg">
                         </button>
-                        <button class="download-button"><img src="media/img/icons/download-solid-full.svg"
-                                alt=""></button>
+                        <button class="download-button">
+                            <p>Descargar</p>
+                            <img src="media/img/icons/download-solid-full.svg">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -192,11 +208,14 @@
 
                     <!-- Footer -->
                     <div class="card-footer-custom">
-                        <button class="share-button">
-                            <p>Compartir</p><img src="media/img/icons/share-nodes-solid-full.svg" alt="">
+                          <button class="share-button">
+                            <p>Compartir</p>
+                            <img src="media/img/icons/share-nodes-solid-full.svg">
                         </button>
-                        <button class="download-button"><img src="media/img/icons/download-solid-full.svg"
-                                alt=""></button>
+                        <button class="download-button">
+                            <p>Descargar</p>
+                            <img src="media/img/icons/download-solid-full.svg">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -243,13 +262,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/filtros.js"></script>
-   <!--  <script src="js/descarga.js"> </script>
-    <script src="js/share.js"></script> -->
     <script src="js/compartir.js"></script>
     <script src="js/descarga2sd.js"></script>
 
     <script>
-
+        // ==========================================
+        // ACTIVAR Y LLENAR EL MODAL CON DATOS DEL CONTENEDOR 
+        // ==========================================
         document.querySelectorAll('.media-image').forEach(mediaContainer => {
 
             mediaContainer.addEventListener('click', function (event) {
@@ -275,9 +294,9 @@
                 // OBTENER CODIGOS
                 // ==========================================
                 const codeElement = card.querySelector('.card-codes');
-               const codes = codeElement
+                const codes = codeElement
                     ? codeElement.textContent.trim()
-                    : ''; 
+                    : '';
                 // ==========================================
                 // CONTENEDOR DEL MODAL
                 // ==========================================
@@ -392,7 +411,7 @@
             });
 
         // ==========================================
-        // Boton copiar
+        // BOTON COPIAR TEXTO DE LOS CÓDIGOS
         // ==========================================
 
         document.getElementById("BotonCopiar").addEventListener("click", () => {
